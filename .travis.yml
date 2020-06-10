@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+  - pip install .[dev]
+script:
+  - coverage run --source=pyrbnachem -m pytest
+  - coverage report -m
+  #- mypy pyrbn
